@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
 export type NewsDetailPageProps = {
-  params: PageProps<'/news/[slug]'>['params'],
+  params: Promise<{ slug: string }>;
 };
 
 async function NewsDetail({ params }: NewsDetailPageProps) {
