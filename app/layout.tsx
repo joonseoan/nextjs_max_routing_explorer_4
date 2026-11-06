@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, Suspense } from 'react';
 import './globals.css';
 import MainHeader from '@/components/main-header/main-header';
 
@@ -12,7 +12,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html lang="en">
       <body>
         <div id="page">
-          <MainHeader />
+          <Suspense>
+            <MainHeader />
+          </Suspense>
           {children}
         </div>
       </body>

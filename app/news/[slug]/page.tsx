@@ -1,5 +1,6 @@
 // export const dynamic = 'force-dynamic';
 import { DUMMY_NEWS } from '@/dummy-data';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
@@ -18,7 +19,9 @@ async function NewsDetail({ params }: NewsDetailPageProps) {
   return <>
     <article className='news-article'>
       <header>
-        <img src={`/images/news/${newsDetail?.image}`} alt={newsDetail?.title} /> 
+        <Link href={`/news/${slug}/image`}>
+          <img src={`/images/news/${newsDetail?.image}`} alt={newsDetail?.title} /> 
+        </Link>
         <h1>{newsDetail?.title}</h1>
         <time dateTime={newsDetail?.date}>{newsDetail?.date}</time>
       </header>
