@@ -22,7 +22,6 @@ async function NewsImage({ params }: NewsImageProps) {
   </div>
 }
 
-
 function NewsImagePage({ params }: NewsImageProps) {
   return <Suspense>
     <NewsImage params={params}/>

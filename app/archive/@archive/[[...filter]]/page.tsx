@@ -64,6 +64,10 @@ async function FilteredNews({ params }: FilteredNewsPageProps) {
     throw new Error('Invalid filter.');
   }
 
+  console.log('selectedYear: ', selectedYear);
+  console.log('selectedMonth: ', selectedMonth);
+  console.log('links: ', links);
+
   return (
     <>
       <header id="archive-header">
